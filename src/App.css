@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #e0dfdd;
+  font-family: "MyCustomFont", sans-serif;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: local("MyCustomFont"), url("./fonts/MyTupi.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.section-container {
+  margin-bottom: 24px;
 }
 
 .App {
@@ -10,18 +23,27 @@
 
 nav {
   display: flex;
-  justify-content: space-around;
-  background-color: #f8f9fa;
-  padding: 1rem;
+  flex-direction: column; /* Make the menu vertical */
+  align-items: flex-end; /* Align the menu to the top-right */
+  padding: 1.5rem;
+  margin-top: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0; /* Stick the menu to the top */
+  right: 0; /* Stick the menu to the right */
+  background-color: transparent; /* Make the background color transparent */
 }
 
 nav ul {
   display: flex;
+  flex-direction: column; /* Make the list items vertical */
   list-style: none;
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
 }
 
 nav li {
-  margin-right: 1rem;
+  margin-bottom: 1rem; /* Add some space between the list items */
 }
 
 nav a {
@@ -32,24 +54,17 @@ nav a {
 
 .section {
   height: 100vh;
+  padding-top: 100px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: baseline;
   font-size: 3rem;
+  padding-left: 30px;
 }
 
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.orange {
-  background-color: orange;
+.box {
+  width: 300px;
+  height: 300px;
+  margin: 0 15px;
+  background-color: #e0dfdd;
 }

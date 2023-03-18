@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { scroller } from "react-scroll";
-import RedPage from "./pages/RedPage";
-import GreenPage from "./pages/GreenPage";
-import BluePage from "./pages/BluePage";
-import OrangePage from "./pages/OrangePage";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
 import "./App.css";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   const scrollToElement = (elementId) => {
@@ -21,24 +21,26 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link onClick={() => scrollToElement("red")}>Red</Link>
+              <Link onClick={() => scrollToElement("home")}>HOME</Link>
             </li>
             <li>
-              <Link onClick={() => scrollToElement("green")}>Green</Link>
+              <Link onClick={() => scrollToElement("portfolio")}>
+                PORTFOLIO
+              </Link>
             </li>
             <li>
-              <Link onClick={() => scrollToElement("blue")}>Blue</Link>
+              <Link onClick={() => scrollToElement("about")}>ABOUT</Link>
             </li>
             <li>
-              <Link onClick={() => scrollToElement("orange")}>Orange</Link>
+              <Link onClick={() => scrollToElement("contact")}>CONTACT</Link>
             </li>
           </ul>
         </nav>
         <main>
-          <RedPage />
-          <GreenPage />
-          <BluePage />
-          <OrangePage />
+          <Home />
+          <Portfolio />
+          <About />
+          <Contact />
         </main>
       </div>
     </Router>
