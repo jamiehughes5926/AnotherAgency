@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Element, animateScroll as scroll, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
+import RedPage from "./pages/RedPage";
+import GreenPage from "./pages/GreenPage";
+import BluePage from "./pages/BluePage";
+import OrangePage from "./pages/OrangePage";
 import "./App.css";
 
 const App = () => {
@@ -31,10 +35,10 @@ const App = () => {
           </ul>
         </nav>
         <main>
-          <Element name="red" className="section red" />
-          <Element name="green" className="section green" />
-          <Element name="blue" className="section blue" />
-          <Element name="orange" className="section orange" />
+          <RedPage />
+          <GreenPage />
+          <BluePage />
+          <OrangePage />
         </main>
       </div>
     </Router>
