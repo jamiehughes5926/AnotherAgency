@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Element, animateScroll as scroll, scroller } from "react-scroll";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const scrollToElement = (elementId) => {
+    scroller.scrollTo(elementId, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link onClick={() => scrollToElement("red")}>Red</Link>
+            </li>
+            <li>
+              <Link onClick={() => scrollToElement("green")}>Green</Link>
+            </li>
+            <li>
+              <Link onClick={() => scrollToElement("blue")}>Blue</Link>
+            </li>
+            <li>
+              <Link onClick={() => scrollToElement("orange")}>Orange</Link>
+            </li>
+          </ul>
+        </nav>
+        <main>
+          <Element name="red" className="section red" />
+          <Element name="green" className="section green" />
+          <Element name="blue" className="section blue" />
+          <Element name="orange" className="section orange" />
+        </main>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
