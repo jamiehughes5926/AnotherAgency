@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { scroller } from "react-scroll";
 import RedPage from "./pages/RedPage";
 import GreenPage from "./pages/GreenPage";
